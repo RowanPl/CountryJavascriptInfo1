@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+}
+#container-world-map{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+#worldMap{
+    display: flex;
+    width: 60vw;
+    padding-bottom: 10px;
+}
+
+#flag-and-text{
+    display: flex;
+    align-items: center;
+}
+
+#Asia{
+    color: darkred;
+}
+#Europe{
+    color: #f5ff00;
+
+}
+#Oceania{
+    color: rebeccapurple;
+}
+#Americas{
+    color: green;
+}
+#Africa{
+    color: blue;
+
+}
+#flag{
+    max-width: 60px;
+    max-height: 40px;
+    margin: 5px;
+}
+#Countries{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+li{
+    background-color: rgba(109, 109, 109, 0.28);
+    border: solid 2px black;
+    list-style: none;
+    display: flex;
+    flex-basis: 310px;
+    flex-wrap: wrap;
+    border-radius: 15px 15px;
+    box-shadow: 4px 5px 10px gray;
+}
+#population{
+margin-left: 10px;
+}
+
+a:link, a, a:visited{
+    text-decoration: none;
+    color: black;
+    flex-basis: 100%;
+}
