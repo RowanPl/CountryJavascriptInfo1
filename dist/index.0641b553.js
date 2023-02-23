@@ -564,8 +564,9 @@ console.log("Hallo daar!");
 let countries;
 async function fetchCountries() {
     try {
-        const response = await (0, _axiosDefault.default).get("https://restcountries.com/v2/all?fields=name,region,flag,population");
+        const response = await (0, _axiosDefault.default).get("https://restcountries.com/v2/all?fields=name,region,flag,population,topLevelDomain");
         countries = response.data;
+        console.log(countries);
         sortByPopulation(countries);
         arrayToHtml(countries);
     } catch (e) {
@@ -583,15 +584,18 @@ function findRegion(Array) {
 function arrayToHtml(Array) {
     const countriesList = document.getElementById("Countries");
     const countryMap = Array.map((country)=>{
-        console.log(country);
-        return `<li> <a href="https://en.wikipedia.org/wiki/${country.name}" target="_blank">
-           <span id="flag-and-text"><img src="${country.flag}" alt="The national flag of ${country.name}" id="flag">
-           <p id="${findRegion(country)}">${country.name}</p></span>
+        return `<li> 
+            <a href="https://en.wikipedia.org/wiki/${country.name}" target="_blank">
+            <span id="flag-and-text"><img src="${country.flag}" alt="The national flag of ${country.name}" id="flag">
+            <p id="${findRegion(country)}">${country.name}</p> 
+            </span>
             <p id="population"> Has a population of ${country.population} people</p>
-           </a> </li>`;
+           </a> 
+          </li>`;
     });
     countriesList.innerHTML = countryMap.join("");
 }
+//<p id="${findRegion(country)}">${country.name}</p>
 //<p id="${country.region}">${country.name} </p>
 fetchCountries();
 
