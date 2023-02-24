@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#Label_container {
+  flex-direction: column;
+  flex-basis: 20px;
+  align-items: center;
+  display: flex;
+}
+
+#wiki {
+  font-size: 10px;
+}
+
+#text {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+#container-world-map {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  display: flex;
+}
+
+#worldMap {
+  width: 60vw;
+  padding-bottom: 10px;
+  display: flex;
+}
+
+#nationalAnthem {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+#country {
+  align-items: center;
+}
+
+#Specific_Country {
+  flex-basis: 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#flag-and-text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#flag {
+  max-width: 60px;
+  max-height: 40px;
+  margin: 5px;
+}
+
+#Countries {
+  background-color: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 20px;
+  display: flex;
+}
+
+#search-form {
+  justify-content: center;
+  display: flex;
+}
+
+#DivContainer {
+  background-color: #6d6d6d47;
+  border: 2px solid #000;
+  border-radius: 15px;
+  flex-direction: column;
+  flex-basis: 300px;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  list-style: none;
+  display: flex;
+  box-shadow: 4px 5px 10px gray;
+}
+
+#population {
+  margin-left: 10px;
+}
+
+a:link, a, a:visited {
+  color: #000;
+  flex-basis: 100%;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=SpecificCountry.6054c7a0.css.map */

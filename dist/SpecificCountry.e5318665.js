@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"lKzq4":[function(require,module,exports) {
+})({"e6hyG":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "fe4256060641b553";
+module.bundle.HMR_BUNDLE_ID = "954c7a2fe5318665";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -556,49 +556,58 @@ function hmrAccept(bundle, id) {
     });
 }
 
-},{}],"bNKaB":[function(require,module,exports) {
+},{}],"8LGPB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 console.log("Hallo daar!");
 let countries;
-async function fetchCountries() {
+let indexByName;
+const searchResult = document.getElementById("search-result");
+const searchForm = document.getElementById("search-form");
+searchForm.addEventListener("submit", searchCountry);
+function searchCountry(e) {
+    e.preventDefault();
+    const searchValue = document.getElementById("search-value");
+    fetchCountries(searchValue.value);
+    searchValue.value = "";
+}
+fetchCountries();
+async function fetchCountries(name) {
     try {
-        const response = await (0, _axiosDefault.default).get("https://restcountries.com/v2/all?fields=name,region,flag,population,topLevelDomain");
-        countries = response.data;
-        console.log(countries);
-        sortByPopulation(countries);
-        arrayToHtml(countries);
+        const response = await (0, _axiosDefault.default).get(`https://restcountries.com/v2/name/${name}`);
+        countries = response.data[0];
+        showCountry();
     } catch (e) {
         console.error(e);
     }
 }
-function sortByPopulation() {
-    countries.sort((a, b)=>{
-        return a.population - b.population;
-    });
+function showCountry() {
+    const country = document.getElementById("Specific_Country");
+    country.innerHTML = `<div id="DivContainer"> 
+            <span id="flag-and-text"><p id="wiki">click the flag to go to the wikipedia page</p>  
+           <a href="https://en.wikipedia.org/wiki/${countries.name}" target="_blank"> <img src="${countries.flag}" alt="The national flag of ${countries.name}" id="flag"></a>
+           </span>
+            <div id="text">
+            <p> ${countries.name} is situated in ${countries.subregion}.</p>
+            <p>It has a population of ${countries.population} people.</p>
+           <p>You can pay with ${currency()}</p></div>
+           <div id="nationalAnthem">
+           <p>National Anthem</p>
+            <audio controls id="anthem" src='https://nationalanthems.info/${countries.topLevelDomain[0].substring(1)}.mp3'></audio>  
+          </div>
+          </div>`;
 }
-function findRegion(Array) {
-    return Array.region;
+function currency() {
+    let output = "";
+    for(let j = 0; j < countries.currencies.length; j++){
+        const currency1 = countries.currencies[j].name + "'s";
+        output = output + currency1;
+        if (j < countries.currencies.length - 1) output = `${output} and `;
+    }
+    return output;
 }
-function arrayToHtml(Array) {
-    const countriesList = document.getElementById("Countries");
-    const countryMap = Array.map((country)=>{
-        return `<li> 
-            <a href="https://en.wikipedia.org/wiki/${country.name}" target="_blank">
-            <span id="flag-and-text"><img src="${country.flag}" alt="The national flag of ${country.name}" id="flag">
-            <p id="${findRegion(country)}">${country.name}</p> 
-            </span>
-            <p id="population"> Has a population of ${country.population} people</p>
-           </a> 
-          </li>`;
-    });
-    countriesList.innerHTML = countryMap.join("");
-}
-//<p id="${findRegion(country)}">${country.name}</p>
-//<p id="${country.region}">${country.name} </p>
-fetchCountries();
 
-},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["lKzq4","bNKaB"], "bNKaB", "parcelRequirecb08")
+},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["e6hyG","8LGPB"], "8LGPB", "parcelRequirecb08")
 
-//# sourceMappingURL=index.0641b553.js.map
+//# sourceMappingURL=SpecificCountry.e5318665.js.map
