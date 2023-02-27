@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Specific country</title>
+    <link rel="icon" href="assets/wereldrond.favicon">
     <link rel="stylesheet" href="stylesSpec.css">
 </head>
 <body>
 <section id="container-world-map">
-    <img id="worldMap" src="assets/world_map.png" alt="map of the world"/>
-    <a href="index.html">Click me to go back to all the countries</a>
+    <a href="index.html">
+        <img id="worldMap" src="assets/wereldrond.png" alt="map of the world"/>
+        Click me to go back to all the countries
+    </a>
 </section>
 
 <form id="search-form">
     <label>
         <input id="search-value" placeholder="For example Belgium or France"/>
     </label>
-    <button type="submit">search</button>
+    <button id="button" type="submit">search</button>
+    <button id="random">Random country</button>
 </form>
 <article id="Specific_Country">
 </article>

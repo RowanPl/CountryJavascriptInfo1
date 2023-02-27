@@ -644,4 +644,4 @@ function reverse() {
 
 },{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["e6hyG","8LGPB"], "8LGPB", "parcelRequirecb08")
 
-//# sourceMappingURL=SpecificCountry.e5318665.js.map
+//# sourceMappingURL=index.e5318665.js.map

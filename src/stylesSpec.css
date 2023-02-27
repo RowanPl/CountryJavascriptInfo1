@@ -3,7 +3,10 @@
     padding: 0px;
 }
 body{
-
+    background-color: steelblue;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 #Label_container{
     display: flex;
@@ -11,6 +14,7 @@ body{
     flex-basis: 20px;
     align-items: center;
 }
+
 #wiki{
     font-size: 10px;
 }
@@ -18,17 +22,21 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
 }
 #container-world-map{
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 30px;
+    justify-content: center;
 }
 #worldMap{
     display: flex;
     width: 60vw;
     padding-bottom: 10px;
+    max-height: 100px;
+    max-width: 100px;
 }
 #nationalAnthem{
     display: flex;
@@ -53,8 +61,8 @@ align-items: center;
     justify-content: center;
 }
 #flag{
-    max-width: 60px;
-    max-height: 40px;
+    max-width: 200px;
+    max-height: 200px;
     margin: 5px;
 }
 #Countries{
@@ -72,12 +80,12 @@ align-items: center;
 }
 
 #DivContainer{
-    background-color: rgba(109, 109, 109, 0.28);
-    border: solid 2px black;
+    background-color: #e8dbdb;
+    border: solid 2px rgba(102, 100, 100, 0.76);
     list-style: none;
     display: flex;
     padding: 30px 20px;
-    flex-basis: 300px;
+    flex-basis: 500px;
     border-radius: 15px 15px;
     box-shadow: 4px 5px 10px gray;
     justify-content: center;
@@ -90,6 +98,35 @@ align-items: center;
 
 a:link, a, a:visited{
     text-decoration: none;
-    color: black;
+    color: white;
+    align-items: center;
     flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#button{
+    background-color: lightgreen;
+    color: darkolivegreen;
+    height: 34px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 60px;
+    margin-left: -10px;
+}
+#search-value{
+    height: 29px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    width: 200px;
+    background-color: rgba(152, 251, 152, 0.66);
+    padding-left: 10px;
+}
+#random{
+    background-color: lightgreen;
+    color: darkolivegreen;
+    border-radius: 30px;
+    width: 70px;
+    border-color: lightgreen;
+    margin-left: 20px;
+
 }
