@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #4682b4;
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+}
+
+#Label_container {
+  flex-direction: column;
+  flex-basis: 20px;
+  align-items: center;
+  display: flex;
+}
+
+#wiki {
+  font-size: 10px;
+}
+
+#text {
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+#container-world-map {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  display: flex;
+}
+
+#worldMap {
+  width: 60vw;
+  max-height: 100px;
+  max-width: 100px;
+  padding-bottom: 10px;
+  display: flex;
+}
+
+#nationalAnthem {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+#country {
+  align-items: center;
+}
+
+#Specific_Country {
+  flex-basis: 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#flag-and-text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#flag {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 5px;
+}
+
+#Countries {
+  background-color: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 20px;
+  display: flex;
+}
+
+#search-form {
+  justify-content: center;
+  display: flex;
+}
+
+#DivContainer {
+  background-color: #e8dbdb;
+  border: 2px solid #666464c2;
+  border-radius: 15px;
+  flex-direction: column;
+  flex-basis: 500px;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  list-style: none;
+  display: flex;
+  box-shadow: 4px 5px 10px gray;
+}
+
+#population {
+  margin-left: 10px;
+}
+
+a:link, a, a:visited {
+  color: #fff;
+  flex-direction: column;
+  flex-basis: 100%;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+#button {
+  color: #556b2f;
+  height: 34px;
+  width: 60px;
+  background-color: #90ee90;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: -10px;
+}
+
+#search-value {
+  height: 29px;
+  width: 200px;
+  background-color: #98fb98a8;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 10px;
+}
+
+#random {
+  color: #556b2f;
+  width: 70px;
+  background-color: #90ee90;
+  border-color: #90ee90;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=SpecificCountry.6054c7a0.css.map */
